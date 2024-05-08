@@ -122,7 +122,7 @@ class _BuyShirtPageState extends State<BuyShirtPage> {
                             //     duration: Durations.long1,
                             //   ),
                             // );
-                            await PaymentService.createPaymentIntent(250);
+                            // await PaymentService.createPaymentIntent(250);
                           },
                         ),
                       ),
