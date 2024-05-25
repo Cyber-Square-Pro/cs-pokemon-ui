@@ -25,6 +25,7 @@ class AuthService {
 
   Future<AuthState> login(String username, String password) async {
     try {
+      print('${ApiConstants.baseURL}/auth/login*****************************');
       Response response = await _dio.post(
         '${ApiConstants.baseURL}/auth/login',
         data: {
@@ -34,6 +35,7 @@ class AuthService {
         options: _options,
       );
 
+   
       if (response.statusCode == 201) {
         final accessToken = response.data['accessToken'];
         final refreshToken = response.data['refreshToken'];
@@ -68,7 +70,7 @@ class AuthService {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       final refreshToken = prefs.getString('refreshToken');
 
-      Response response = await _dio.post(
+      Response response = await _dio.put(
         '${ApiConstants.baseURL}/auth/refresh-token',
         data: {'refreshToken': refreshToken},
         options: _options,
@@ -113,8 +115,9 @@ class AuthService {
   }) async {
     print('$username $email $phoneNumber $password');
 
-    final uri = '${ApiConstants.baseURL}/auth/register';
+    final uri = 'http://api.pokemon-dev.pro.cybersquare.org/auth/register';
     try {
+      print('*********************$uri');
       final Response response = await _dio.put(
         uri,
         data: {
@@ -125,8 +128,10 @@ class AuthService {
         },
         options: _options,
       );
+      // final Response response = await _dio.get(uri);
 
-      print(response.statusMessage);
+      print(response);
+      print('reesssssssssssssssssssss');
 
       if (response.statusCode == 200 || response.statusCode == 201) {
         return true;

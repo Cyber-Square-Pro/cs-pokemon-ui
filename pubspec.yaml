@@ -9,12 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   provider: ^6.0.5
   mobx: ^2.2.0
   flutter_mobx: ^2.0.6+5
-  equatable:
-
+  equatable: ^2.0.3
   cupertino_icons: ^1.0.2
   get_it: ^7.6.4
   lottie: ^2.6.0
@@ -30,7 +28,7 @@ dependencies:
   audio_video_progress_bar: ^2.0.0
   pinput: ^3.0.1
   animations: ^2.0.8
-  intl:
+  intl: ^0.18.0
   stop_watch_timer: ^3.0.2
   flutter_screenutil: ^5.9.0
   connectivity_plus: ^5.0.2
@@ -38,25 +36,26 @@ dependencies:
   flutter_dotenv: ^5.1.0
   intl_phone_field: ^3.2.0
   table_calendar: ^3.0.9
-  collection: ^1.18.0
-  http: ^1.1.2
+  http: ^1.1.0
   flutter_credit_card: ^4.0.1
   isar: ^3.1.0+1
   isar_flutter_libs: ^3.1.0+1
   path_provider: ^2.1.1
   build_runner: ^2.4.7
 
+dependency_overrides:
+  collection: 1.17.2
 
 dev_dependencies:
-  mockito:
+  mockito: ^5.3.0
   flutter_test:
     sdk: flutter
   integration_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
   mobx_codegen: ^2.6.0
   isar_generator: ^3.1.0+1
+
 flutter:
   uses-material-design: true
   assets:
@@ -78,7 +77,6 @@ flutter:
     - assets/images/pokemons_generations/generation_8/
     - assets/lotties/
     - assets/images/pokemons_types/20/water.png
-
     - .env
 
   fonts:

@@ -135,7 +135,7 @@ class _TShirtsPageState extends State<TShirtsPage> {
                                       credits: credits,
                                     ),
                                     transition: PageTransitions.slideLeft,
-                                    duration: Durations.long1,
+                                    duration:  const Duration(milliseconds: 300),
                                   ),
                                 );
                               }

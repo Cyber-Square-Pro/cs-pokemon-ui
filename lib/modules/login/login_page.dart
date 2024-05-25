@@ -219,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                                       context,
                                       TransitionPageRoute(
                                         child: const HomePage(),
-                                        duration: Durations.long4,
+                                        duration:  const Duration(milliseconds: 300),
                                         transition: PageTransitions.slideLeft,
                                         curve: Curves.ease,
                                       ),

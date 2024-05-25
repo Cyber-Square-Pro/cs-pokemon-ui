@@ -1,3 +1,4 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 class ApiConstants {
   ApiConstants._();
   static String get pokedexSummaryData =>
@@ -16,5 +17,5 @@ class ApiConstants {
       'https://bd26-2405-201-f00c-3016-3897-543-21b4-b35a.ngrok-free.app';
 
   // Base URL
-  static String baseURL = _render;
+  static String baseURL =  dotenv.env['API_KEY']??"";
 }

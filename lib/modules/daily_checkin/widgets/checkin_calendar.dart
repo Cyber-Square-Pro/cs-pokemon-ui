@@ -26,7 +26,7 @@ class CheckinCalendar extends StatelessWidget {
     return TableCalendar(
       calendarStyle: _calStyle(context),
       headerStyle: _headerStyle(context),
-      pageAnimationDuration: Durations.long3,
+      pageAnimationDuration:  const Duration(milliseconds: 300),
       daysOfWeekStyle: _daysOfWeekStyle(context),
       weekNumbersVisible: false,
       focusedDay: focusedDay,

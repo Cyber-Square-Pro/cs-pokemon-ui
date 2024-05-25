@@ -19,7 +19,7 @@ class OtpService {
   }
 
   Future<bool> sendOTP(String email, String intent) async {
-    final uri = '${ApiConstants.baseURL}/users/send-otp';
+    final uri = 'http://api.pokemon-dev.pro.cybersquare.org/users/send-otp';
     try {
       final Response response = await _dio.post(
         uri,
